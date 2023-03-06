@@ -18,10 +18,30 @@ const onClickBtn = function () {
 hamburger.addEventListener("click", onClickBtn);
 
 // Fonctionnalité 3
-const card = document.querySelector("body > main > div > div > div > div:nth-child(1) > div")
-console.log(card)
+const cardText = document.querySelector("body > main > div > div > div > div:nth-child(1) > div > div > p")
+console.log(cardText)
+const editButton = document.querySelector("body > main > div > div > div > div:nth-child(1) > div > div > div > div > button.btn.btn-sm.btn-outline-secondary")
+console.log(editButton)
 
-function changerCouleur()
-{
-    this.style.backgroundColor = '#FF0000';
-}
+const onClickBtnEdit = function () {
+  cardText.style.color = "red"
+};
+editButton.addEventListener("click", onClickBtnEdit);
+
+// Fonctionnalité 4
+const cardTextTwo = document.querySelector("body > main > div > div > div > div:nth-child(2) > div > div > p")
+console.log(cardTextTwo)
+const editButtonTwo = document.querySelector("body > main > div > div > div > div:nth-child(2) > div > div > div > div > button.btn.btn-sm.btn-outline-secondary")
+console.log(editButtonTwo)
+
+const onClickBtnEditTwo = function () {
+  cardTextTwo.style.color = "green"
+};
+editButtonTwo.addEventListener("click", onClickBtnEditTwo);
+
+if (cardTextTwo.style.color === 'green'){
+
+  cardTextTwo.style.color = '' ;
+  
+  }
+else 
