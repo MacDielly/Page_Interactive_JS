@@ -5,6 +5,7 @@ footer1.addEventListener('click', function printClick(){
     console.log(`clic numéro ${++a}`);
 });
 
+
 // Fonctionnalité 2
 const hamburger = document.querySelector(".navbar-toggler");
 console.log(hamburger);
@@ -17,6 +18,7 @@ const onClickBtn = function () {
 
 hamburger.addEventListener("click", onClickBtn);
 
+
 // Fonctionnalité 3
 const cardText = document.querySelector("body > main > div > div > div > div:nth-child(1) > div > div > p")
 console.log(cardText)
@@ -28,6 +30,7 @@ const onClickBtnEdit = function () {
 };
 editButton.addEventListener("click", onClickBtnEdit);
 
+
 // Fonctionnalité 4
 const cardTextTwo = document.querySelector("body > main > div > div > div > div:nth-child(2) > div > div > p")
 console.log(cardTextTwo)
@@ -35,13 +38,10 @@ const editButtonTwo = document.querySelector("body > main > div > div > div > di
 console.log(editButtonTwo)
 
 const onClickBtnEditTwo = function () {
-  cardTextTwo.style.color = "green"
+  if (cardTextTwo.style.color === 'green') {
+    cardTextTwo.style.color = '';
+  } else {
+    cardTextTwo.style.color = 'green';
+  }
 };
 editButtonTwo.addEventListener("click", onClickBtnEditTwo);
-
-if (cardTextTwo.style.color === 'green'){
-
-  cardTextTwo.style.color = '' ;
-  
-  }
-else 
